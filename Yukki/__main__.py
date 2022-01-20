@@ -29,7 +29,7 @@ from Yukki.Utilities.inline import paginate_modules
 loop = asyncio.get_event_loop()
 console = Console()
 HELPABLE = {}
-
+HOTTIE_IMG = "https://telegra.ph/file/130b5361bcb94637b0d3c.jpg"
 
 async def initiate_bot():
     with console.status(
@@ -86,14 +86,15 @@ async def initiate_bot():
     )
     try:
         await app.send_message(
+            HOTTIE_IMG,
             LOG_GROUP_ID,
             "<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="Support🚑",
-                             url=f"https://t.me/Hottie_Support")
+                             text="[► Summon Me ◄]",
+                             url=f"https://t.me/Hottie_Robot?startgroup=true")
                      ] 
                 ]
             ),
