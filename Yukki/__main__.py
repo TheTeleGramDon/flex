@@ -199,17 +199,6 @@ async def initiate_bot():
         console.print(f"├[green] ID :- {ASSID5}!")
     if LOG_SESSION != "None":
         try:
-            await LOG_CLIENT.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Logger Client has started successfully!</b>",
-            )
-        except Exception as e:
-            print(
-                "\nLogger Client has failed to access the log Channel. Make sure that you have added your Logger Account to your log channel and promoted as admin!"
-            )
-            console.print(f"\n[red]Stopping Bot")
-            return
-        try:
             await LOG_CLIENT.join_chat("OfficialYukki")
             await LOG_CLIENT.join_chat("YukkiSupport")
         except:
