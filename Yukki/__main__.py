@@ -88,7 +88,16 @@ async def initiate_bot():
         await app.send_message(
             LOG_GROUP_ID,
             "<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
-        )
+            reply_markup=InlineKeyboardMarkup(
+                [
+                  [                  
+                       InlineKeyboardButton(
+                             text="Support🚑",
+                             url=f"https://t.me/Hottie_Support")
+                     ] 
+                ]
+            ),
+        ) 
     except Exception as e:
         print(
             "\nBot has failed to access the log Channel. Make sure that you have added your bot to your log channel and promoted as admin!"
@@ -103,17 +112,6 @@ async def initiate_bot():
     console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
     console.print(f"├[green] ID :- {BOT_ID}!")
     if STRING1 != "None":
-        try:
-            await ASS_CLI_1.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
-            )
-        except Exception as e:
-            print(
-                "\nAssistant Account 1 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
-            )
-            console.print(f"\n[red]Stopping Bot")
-            return
         try:
             await ASS_CLI_1.join_chat("OfficialYukki")
             await ASS_CLI_1.join_chat("YukkiSupport")
