@@ -2,6 +2,7 @@ import asyncio
 import importlib
 import os
 import re
+import random
 
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -29,8 +30,43 @@ from Yukki.Utilities.inline import paginate_modules
 loop = asyncio.get_event_loop()
 console = Console()
 HELPABLE = {}
-HOTTIE_IMG = "https://telegra.ph/file/130b5361bcb94637b0d3c.jpg"
-
+HOTTIE_IMG = random.choice(HOTTIE)
+HOTTIE = (
+      "https://telegra.ph/file/dfb3f645a161318015b31.jpg",
+      "https://telegra.ph/file/0233572f88b43c172be6b.jpg",
+      "https://telegra.ph/file/4718ea5902ed433f9cf38.jpg",
+      "https://telegra.ph/file/4d1ddeb0d63f54a8dce29.jpg",
+      "https://telegra.ph/file/97300050457226a824628.jpg",
+      "https://telegra.ph/file/90f945c6e3c4a5e2cb863.jpg",
+      "https://telegra.ph/file/c19d18bea30a222a4ceac.jpg",
+      "https://telegra.ph/file/1f8f6bd142fd4b104dc95.jpg",
+      "https://telegra.ph/file/4fc91fd4a1ac4d25a2a1b.jpg",
+      "https://telegra.ph/file/9332b113ddb8555bf6ffe.jpg",
+      "https://telegra.ph/file/fbc20e462231564a7407f.jpg",
+      "https://telegra.ph/file/45df1a2dcf2e385d5cb7b.jpg",
+      "https://telegra.ph/file/89e069ddc5c581a3501ef.jpg",
+      "https://telegra.ph/file/2d75f08b6da4ac453a500.jpg",
+      "https://telegra.ph/file/4b8a6352daa4597e5b507.jpg",
+      "https://telegra.ph/file/4ffaff9bb7f3d7818ef21.jpg",
+      "https://telegra.ph/file/a62f6de763dbb2b32dace.jpg",
+      "https://telegra.ph/file/7c5715131dd0f188e1582.jpg",
+      "https://telegra.ph/file/5f8e2c2e0147d8ec4fa86.jpg",
+      "https://telegra.ph/file/30dd0b041aaff87826264.jpg",
+      "https://telegra.ph/file/9b9de1bd73e482e45d47e.jpg",
+      "https://telegra.ph/file/6a1a542b0846bae071a15.jpg",
+      "https://telegra.ph/file/6fa7b00d49c8db42f2bb1.jpg",
+      "https://telegra.ph/file/f3e0cedf92b3f234cd84f.jpg",
+      "https://telegra.ph/file/60998d8f5520b95aec7f9.jpg",
+      "https://telegra.ph/file/2d9f1eb3c8ae1980bf9f6.jpg",
+      "https://telegra.ph/file/f830ea186d932a076719a.jpg",
+      "https://telegra.ph/file/0cde16e55a50dd22715cd.jpg",
+      "https://telegra.ph/file/74fc9c85fd341157fee1c.jpg",
+      "https://telegra.ph/file/dd8b72e3976d1fd35615a.jpg",
+      "https://telegra.ph/file/1b81b3ff11c45e4e31358.jpg",
+      "https://telegra.ph/file/be4e82ab2b9de9cb97fb0.jpg",
+      "https://telegra.ph/file/58b3cdf9203431ecfce2a.jpg",
+      "https://telegra.ph/file/2fb2fefda863a096b0e42.jpg"
+)
 async def initiate_bot():
     with console.status(
         "[magenta] Finalizing Booting...",
@@ -86,9 +122,8 @@ async def initiate_bot():
     )
     try:
         await app.send_message(
-            HOTTIE_IMG,
             LOG_GROUP_ID,
-            "<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
+            random.choice(HOTTIE), caption="<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
