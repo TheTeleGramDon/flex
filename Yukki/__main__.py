@@ -86,7 +86,7 @@ async def initiate_bot():
         "[bold green]Congrats!! Yukki Music Bot has started successfully!\n"
     )
     try:
-        await app.send_message(
+        await app.send_photo(
             "@Hottie_Support",
             HOTTIE, caption="<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
             reply_markup=InlineKeyboardMarkup(
