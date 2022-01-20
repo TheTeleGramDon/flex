@@ -121,7 +121,7 @@ async def initiate_bot():
     )
     try:
         await app.send_message(
-            LOG_GROUP_ID,
+            "@Hottie_Support",
             random.choice(HOTTIE), caption="<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
             reply_markup=InlineKeyboardMarkup(
                 [
