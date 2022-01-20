@@ -30,7 +30,6 @@ from Yukki.Utilities.inline import paginate_modules
 loop = asyncio.get_event_loop()
 console = Console()
 HELPABLE = {}
-HOTTIE_IMG = random.choice(HOTTIE)
 HOTTIE = (
       "https://telegra.ph/file/dfb3f645a161318015b31.jpg",
       "https://telegra.ph/file/0233572f88b43c172be6b.jpg",
