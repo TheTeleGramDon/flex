@@ -30,7 +30,7 @@ from Yukki.Utilities.inline import paginate_modules
 loop = asyncio.get_event_loop()
 console = Console()
 HELPABLE = {}
-HOTTIE = (
+IMG = (
       "https://telegra.ph/file/dfb3f645a161318015b31.jpg",
       "https://telegra.ph/file/0233572f88b43c172be6b.jpg",
       "https://telegra.ph/file/4718ea5902ed433f9cf38.jpg",
@@ -66,6 +66,8 @@ HOTTIE = (
       "https://telegra.ph/file/58b3cdf9203431ecfce2a.jpg",
       "https://telegra.ph/file/2fb2fefda863a096b0e42.jpg"
 )
+HOTTIE = random.choice(IMG)
+
 async def initiate_bot():
     with console.status(
         "[magenta] Finalizing Booting...",
@@ -122,7 +124,7 @@ async def initiate_bot():
     try:
         await app.send_message(
             "@Hottie_Support",
-            random.choice(HOTTIE), caption="<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
+            HOTTIE, caption="<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
