@@ -87,14 +87,14 @@ async def initiate_bot():
     )
     try:
         await app.send_photo(
-            "@Hottie_Support",
-            HOTTIE, caption="<b>Hottie Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
+            "@thanimaisupport",
+            HOTTIE, caption="<b>Music Has been Started! Working Fine For Status, Click /start And /help For More Info.</b>",
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
                              text="[► Summon Me ◄]",
-                             url=f"https://t.me/Hottie_Robot?startgroup=true")
+                             url=f"https://t.me/FINAL_STRIKER_BOT?startgroup=true")
                      ] 
                 ]
             ),
